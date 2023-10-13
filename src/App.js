@@ -27,13 +27,13 @@ class App extends React.Component {
             div >
 
             <
-            button onClick = { this.incrementCounter } > Click me < /button>  <
+            button onClick = { this.incrementCounter } > Click me < /button>   <
             br / >
-            counter: { this.state.counter } <
-            br / >
+            counter: { this.state.counter }
+
+
             <
-            div > { this.state.innerComponent } < /div> < /
-            div >
+            /div>
         )
     }
     getSnapshotBeforeUpdate(prevProps, prevState) {
