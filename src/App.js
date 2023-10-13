@@ -72,6 +72,26 @@ function App() {
             console.log("Email: " + this.Email)
         }
     }
+    class Monitor extends student {
+        batch
+        constructor(Name, Age, RollNo, Email, batch) {
+            super(Name, Age, RollNo, Email)
+            console.log("Called Monitor Constructor")
+            this.batch = batch
+            console.log("Monitor constructor completed work ")
+        }
+        printMonitor() {
+            super.printStudent()
+            console.log("Monitor print started work")
+            console.log("batch=" + this.batch)
+            console.log("Monitor print completed work")
+        }
+    }
+    console.log("Starting to create moniter object")
+    let moniterManish = new Monitor("Manisha baghel", 12, 112, "email", "React")
+    console.log("starting to print")
+    moniterManish.printMonitor()
+    console.log("completed to print")
     let st = new student
     st.Age = 11
     st.Name = "Nikita"
@@ -80,7 +100,7 @@ function App() {
     let Nikita = new student("Patidar", 23, 101, "patidarnikita36@gmail.com")
     Nikita.printStudent()
 
-    console.log("student:" + st)
+    //console.log("student:" + st.student)
     return ( <
         div className = "App" >
         <
@@ -95,8 +115,8 @@ function App() {
         a className = "App-link"
         href = "https://reactjs.org"
         target = "_blank"
-        rel = "noopener noreferrer" > Learn React < /a>        <
-        /header>  <
+        rel = "noopener noreferrer" > Learn React < /a>        < /
+        header > <
         /div>
     );
 }
